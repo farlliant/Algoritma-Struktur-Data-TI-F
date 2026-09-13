@@ -1,262 +1,87 @@
-﻿# Algoritma & Struktur Data — TI-F
+﻿# 🚀 Algoritma & Struktur Data — TI-F
 
-Repository ini berisi kode percobaan dan implementasi materi **Praktikum Algoritma dan Struktur Data TI-F**.
+<p align="center">
+  <img src="https://img.shields.io/badge/LANGUAGE-JAVA-F89820?style=for-the-badge&labelColor=555555" alt="Java">
+  <img src="https://img.shields.io/badge/CLASS-TI--F%202026-00A6ED?style=for-the-badge&labelColor=555555" alt="TI-F 2026">
+  <img src="https://img.shields.io/badge/STATUS-LEARNING-55C900?style=for-the-badge&labelColor=555555" alt="Learning">
+</p>
 
-Materi disusun mengikuti urutan pembelajaran praktikum pada **Semester Ganjil 2026/2027** dan diimplementasikan menggunakan **Java**.
+---
+
+<div align="center">
+
+## 👋 Selamat Datang!
+
+Selamat datang di repository **Algoritma & Struktur Data TI-F** 🚀
+
+Repository ini digunakan sebagai dokumentasi materi, percobaan, implementasi, dan live coding selama kegiatan **Praktikum Algoritma dan Struktur Data**.
+
+Setiap materi disusun berdasarkan topik praktikum dan ditempatkan pada folder masing-masing agar mudah dipelajari, dijalankan, dan digunakan kembali sebagai referensi.
+
+</div>
 
 ---
 
 ## 📚 Daftar Materi
 
-| Pertemuan | Materi | Status |
+| BAB | Topik Pembahasan | Status |
 |:---:|---|:---:|
-| 01 | Algoritma | ⏳ |
-| 02 | [ADT Array](./ADT%20Array) | ✅ |
-| 03 | [ADT Single Linked List](./ADT%20Single%20Linked%20List) | ✅ |
-| 04 | ADT Double Linked List | ⏳ |
-| 05 | ADT Circular Linked List | ⏳ |
-| 06 | ADT Stack | ⏳ |
-| 07 | ADT Queue | ⏳ |
-| 08 | ADT Binary Tree | ⏳ |
-| 09 | ADT AVL Tree | ⏳ |
-| 10 | ADT Graf | ⏳ |
-| 11 | Sorting | ⏳ |
+| **01** | [Algoritma](./Algoritma) | ✅ |
+| **02** | [ADT Array](./ADT%20Array) | ✅ |
+| **03** | [ADT Single Linked List](./ADT%20Single%20Linked%20List) | ✅ |
+| **04** | ADT Double Linked List | ⏳ |
+| **05** | ADT Circular Linked List | ⏳ |
+| **06** | ADT Stack | ⏳ |
+| **07** | ADT Queue | ⏳ |
+| **08** | ADT Binary Tree | ⏳ |
+| **09** | ADT AVL Tree | ⏳ |
+| **10** | ADT Graf | ⏳ |
+| **11** | Sorting | ⏳ |
 
-> ✅ Materi sudah tersedia  
-> ⏳ Materi akan ditambahkan
+> ✅ Materi tersedia  
+> ⏳ Materi belum ditambahkan
+
+---
+
+## 💻 Live Coding
+
+Kumpulan soal dan pembahasan live coding dapat ditemukan pada folder:
+
+👉 **[Live Coding](./Live%20Coding)**
 
 ---
 
 ## 🗂️ Struktur Repository
 
 ```text
-Algoritam-Struktur-Data-TI-F/
+Algoritma & Struktur Data - TI-F/
+│
+├── Algoritma/
+│   ├── README.md
+│   └── ...
 │
 ├── ADT Array/
-│   ├── Percobaan1.java
-│   ├── Percobaan2.java
-│   ├── Percobaan3.java
-│   ├── Percobaan4.java
-│   ├── Percobaan5.java
-│   └── Matrik.java
+│   ├── README.md
+│   └── ...
 │
 ├── ADT Single Linked List/
+│   ├── README.md
+│   └── ...
+│
+├── Live Coding/
 │   └── ...
 │
 └── README.md
 ```
 
-Struktur repository akan terus bertambah mengikuti materi praktikum setiap pertemuan.
+Setiap folder materi memiliki `README.md` masing-masing yang berisi penjelasan konsep, percobaan, dan implementasi terkait materi tersebut.
 
 ---
 
-## 01 — Algoritma
+<div align="center">
 
-Materi awal membahas dasar penyelesaian masalah dalam pemrograman sebelum masuk ke implementasi struktur data.
+## ⭐ Happy Coding & Keep Learning! ⭐
 
-Pokok bahasan:
+*"The more I learn, the more I realize how much I don't know."*
 
-- Algoritma pemrograman
-- Flowchart
-- Pseudocode
-- Input, proses, dan output
-- Percabangan
-- Perulangan
-
----
-
-## 02 — ADT Array
-
-Array digunakan untuk menyimpan sekumpulan data dengan tipe yang sama dan mengaksesnya menggunakan indeks.
-
-Materi yang dipelajari meliputi:
-
-- Array satu dimensi
-- Deklarasi dan inisialisasi array
-- Akses elemen menggunakan indeks
-- Traversal array
-- Sorting array
-- Penyisipan data
-- Perbandingan array
-- Array dua dimensi
-- Baris dan kolom pada array
-
-📂 **[Buka materi ADT Array](./ADT%20Array)**
-
----
-
-## 03 — ADT Single Linked List
-
-Single Linked List merupakan struktur data yang terdiri dari kumpulan **node** yang saling terhubung dalam satu arah.
-
-Setiap node pada dasarnya memiliki:
-
-```text
-┌────────┬────────┐
-│  Data  │  Next  │
-└────────┴────────┘
-              │
-              ▼
-        Node berikutnya
-```
-
-Materi yang dipelajari meliputi:
-
-- Node
-- Pointer `next`
-- `head`
-- `tail`
-- `size`
-- Pengecekan linked list kosong
-- Penambahan node di awal
-- Penambahan node di akhir
-- Traversal Single Linked List
-- Operasi dasar Single Linked List
-
-📂 **[Buka materi ADT Single Linked List](./ADT%20Single%20Linked%20List)**
-
----
-
-## 04 — ADT Double Linked List
-
-Materi membahas linked list yang memiliki hubungan dua arah melalui pointer menuju node sebelumnya dan node berikutnya.
-
-```text
-NULL ← [prev | data | next] ⇄ [prev | data | next] → NULL
-```
-
----
-
-## 05 — ADT Circular Linked List
-
-Materi membahas linked list di mana node terakhir kembali terhubung dengan node pertama.
-
-```text
-head → Node → Node → Node
-  ↑                   │
-  └───────────────────┘
-```
-
----
-
-## 06 — ADT Stack
-
-Stack menggunakan konsep **LIFO (Last In, First Out)**.
-
-Operasi utama:
-
-- `push`
-- `pop`
-- `peek`
-- `isEmpty`
-
----
-
-## 07 — ADT Queue
-
-Queue menggunakan konsep **FIFO (First In, First Out)**.
-
-Operasi utama:
-
-- `enqueue`
-- `dequeue`
-- `front`
-- `isEmpty`
-
----
-
-## 08 — ADT Binary Tree
-
-Binary Tree merupakan struktur data tree di mana setiap node dapat mempunyai maksimal dua child.
-
----
-
-## 09 — ADT AVL Tree
-
-AVL Tree merupakan **self-balancing Binary Search Tree** yang menjaga keseimbangan tinggi subtree.
-
-Pokok bahasan:
-
-- Balance factor
-- Rotasi kiri
-- Rotasi kanan
-- Rotasi ganda
-- Menjaga keseimbangan tree
-
----
-
-## 10 — ADT Graf
-
-Materi membahas representasi hubungan antar-vertex menggunakan graf.
-
-Pokok bahasan:
-
-- Vertex
-- Edge
-- Adjacency
-- Representasi graf
-- Traversal graf
-
----
-
-## 11 — Sorting
-
-Materi membahas proses pengurutan data menggunakan algoritma sorting.
-
-Fokus pembelajaran:
-
-- Mekanisme pengurutan data
-- Perbandingan elemen
-- Pertukaran elemen
-- Analisis proses sorting
-
----
-
-## 💻 Menjalankan Program
-
-Pastikan **Java Development Kit (JDK)** sudah terpasang.
-
-Compile program:
-
-```bash
-javac NamaFile.java
-```
-
-Jalankan program:
-
-```bash
-java NamaFile
-```
-
-Contoh:
-
-```bash
-javac Percobaan1.java
-java Percobaan1
-```
-
----
-
-## 🛠️ Teknologi
-
-- **Language:** Java
-- **Version Control:** Git
-- **Repository:** GitHub
-
----
-
-## 📌 Catatan
-
-Repository ini digunakan sebagai dokumentasi kode percobaan dan materi Praktikum Algoritma dan Struktur Data TI-F.
-
-Implementasi pada setiap folder mengikuti materi yang dipelajari pada pertemuan terkait.
-
-Repository akan diperbarui secara bertahap selama praktikum berlangsung.
-
----
-
-## 👤 Author
-
-**Farrel Brilliant**
-
-GitHub: [@farlliant](https://github.com/farlliant)
+</div>
