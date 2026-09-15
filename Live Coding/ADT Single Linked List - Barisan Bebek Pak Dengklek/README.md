@@ -1,6 +1,27 @@
 # Live Coding ADT Single Linked List — Barisan Bebek Pak Dengklek
 
-Pak Dengklek memiliki beberapa bebek yang sedang berlatih untuk mengikuti sebuah parade. Setiap bebek memiliki **nomor identitas** berupa sebuah bilangan bulat.
+Soal ini digunakan untuk latihan/live coding materi **ADT Single Linked List** pada Praktikum Algoritma dan Struktur Data.
+
+Fokus utama soal:
+
+- Implementasi `Node`
+- Pointer `next`
+- Pointer `head` dan `tail`
+- Penambahan node di depan
+- Penambahan node di belakang
+- Traversal Single Linked List
+- Pencarian data
+- Penghapusan node
+- Pemeliharaan `size`
+- Penanganan kondisi list kosong
+
+---
+
+## Deskripsi Soal
+
+Pak Dengklek memiliki beberapa bebek yang sedang berlatih untuk mengikuti sebuah parade.
+
+Setiap bebek memiliki **nomor identitas** berupa sebuah bilangan bulat.
 
 Untuk mengatur barisan bebek, Pak Dengklek menggunakan sebuah **Single Linked List**.
 
@@ -10,18 +31,15 @@ Terdapat tiga jenis perintah:
 
 | Perintah | Keterangan |
 |---|---|
-| `DEPAN X` | Bebek bernomor `X` masuk ke **bagian paling depan** barisan |
-| `BELAKANG X` | Bebek bernomor `X` masuk ke **bagian paling belakang** barisan |
-| `PULANG X` | Bebek bernomor `X` yang ditemukan **pertama kali dari arah depan** keluar dari barisan |
+| `DEPAN X` | Bebek bernomor `X` masuk ke bagian paling depan barisan |
+| `BELAKANG X` | Bebek bernomor `X` masuk ke bagian paling belakang barisan |
+| `PULANG X` | Hapus node pertama bernilai `X` yang ditemukan saat traversal dari `head` menuju `tail` |
 
-Jika perintah `PULANG X` diberikan tetapi tidak terdapat bebek bernomor `X` di dalam barisan, maka:
-
-- barisan tidak berubah;
-- perintah tersebut dianggap **gagal**.
+Jika perintah `PULANG X` diberikan tetapi tidak terdapat node dengan nilai `X`, maka barisan tidak berubah dan perintah tersebut dianggap **gagal**.
 
 Beberapa bebek boleh memiliki nomor yang sama.
 
-Jika terdapat beberapa bebek dengan nomor `X`, hanya bebek **pertama dari arah `head`** yang dikeluarkan.
+Jika terdapat lebih dari satu node dengan nilai `X`, maka hanya **kemunculan pertama nilai `X` yang ditemukan saat traversal dari `head` menuju `tail`** yang dihapus.
 
 Setelah seluruh perintah selesai dijalankan, tentukan kondisi akhir barisan bebek Pak Dengklek.
 
@@ -29,7 +47,7 @@ Setelah seluruh perintah selesai dijalankan, tentukan kondisi akhir barisan bebe
 
 ## Format Masukan
 
-Baris pertama berisi sebuah bilangan bulat:
+Baris pertama berisi:
 
 ```text
 N
@@ -45,9 +63,7 @@ BELAKANG X
 PULANG X
 ```
 
----
-
-## Batasan
+### Batasan
 
 ```text
 1 ≤ N ≤ 1000
@@ -60,9 +76,9 @@ Nomor beberapa bebek boleh sama.
 
 ## Format Keluaran
 
-Cetak tepat **dua baris**.
+Cetak tepat dua baris.
 
-### Baris Pertama
+Baris pertama:
 
 ```text
 jumlahBebek jumlahPerintahGagal
@@ -70,12 +86,10 @@ jumlahBebek jumlahPerintahGagal
 
 dengan:
 
-- `jumlahBebek` adalah jumlah bebek yang masih berada di dalam barisan;
-- `jumlahPerintahGagal` adalah banyaknya perintah `PULANG` yang gagal karena nomor bebek tidak ditemukan.
+- `jumlahBebek` adalah jumlah bebek yang masih berada di dalam barisan.
+- `jumlahPerintahGagal` adalah banyaknya perintah `PULANG` yang gagal karena nilai `X` tidak ditemukan.
 
-### Baris Kedua
-
-Cetak seluruh nomor bebek dari **`head` menuju `tail`**, dipisahkan oleh satu spasi.
+Baris kedua berisi seluruh nomor bebek dari **`head` menuju `tail`**, dipisahkan oleh satu spasi.
 
 Jika barisan kosong, cetak:
 
@@ -101,18 +115,7 @@ PULANG 99
 BELAKANG 40
 ```
 
-### Output
-
-```text
-5 1
-7 5 10 30 40
-```
-
----
-
-## Penjelasan
-
-Kondisi barisan berubah sebagai berikut:
+Perubahan barisan:
 
 ```text
 Awal          -> KOSONG
@@ -123,18 +126,11 @@ DEPAN 5       -> 5 10 20
 BELAKANG 30   -> 5 10 20 30
 PULANG 20     -> 5 10 30
 DEPAN 7       -> 7 5 10 30
-PULANG 99     -> gagal, karena 99 tidak ditemukan
+PULANG 99     -> gagal
 BELAKANG 40   -> 7 5 10 30 40
 ```
 
-Pada akhir proses:
-
-```text
-Jumlah bebek          = 5
-Jumlah perintah gagal = 1
-```
-
-Sehingga output:
+### Output
 
 ```text
 5 1
@@ -143,127 +139,331 @@ Sehingga output:
 
 ---
 
-## Ketentuan
+## Ide Penyelesaian
 
-Penyelesaian **wajib** menggunakan **Single Linked List**.
-
-Gunakan `Node` yang menyimpan:
+Buat sebuah `Node` yang menyimpan:
 
 ```text
 data
 next
 ```
 
-Gunakan pointer:
+Kemudian buat struktur Single Linked List yang memiliki:
 
 ```text
 head
 tail
+size
+jumlahPerintahGagal
 ```
 
-Tidak diperbolehkan menggunakan struktur data bawaan Java berikut:
+### 1. Perintah `DEPAN X`
+
+Buat node baru.
+
+Jika list masih kosong:
+
+```text
+head = nodeBaru
+tail = nodeBaru
+```
+
+Jika list sudah memiliki node:
+
+```text
+nodeBaru.next = head
+head = nodeBaru
+```
+
+Kemudian:
+
+```text
+size++
+```
+
+Contoh:
+
+```text
+Sebelum:
+
+head
+ |
+ v
+[10] -> [20] -> null
+
+
+DEPAN 5
+
+
+Sesudah:
+
+head
+ |
+ v
+[5] -> [10] -> [20] -> null
+```
+
+---
+
+### 2. Perintah `BELAKANG X`
+
+Buat node baru.
+
+Jika list masih kosong:
+
+```text
+head = nodeBaru
+tail = nodeBaru
+```
+
+Jika list sudah memiliki node:
+
+```text
+tail.next = nodeBaru
+tail = nodeBaru
+```
+
+Kemudian:
+
+```text
+size++
+```
+
+Contoh:
+
+```text
+Sebelum:
+
+head        tail
+ |            |
+ v            v
+[10] -> [20] -> null
+
+
+BELAKANG 30
+
+
+Sesudah:
+
+head                tail
+ |                    |
+ v                    v
+[10] -> [20] -> [30] -> null
+```
+
+---
+
+### 3. Perintah `PULANG X`
+
+Lakukan pencarian dari `head` menuju `tail`.
+
+Terdapat beberapa kondisi yang perlu diperhatikan.
+
+#### List kosong
+
+Jika list kosong, nilai `X` pasti tidak ditemukan.
+
+```text
+jumlahPerintahGagal++
+```
+
+#### Node `head` bernilai `X`
+
+Jika:
+
+```text
+head.data == X
+```
+
+maka:
+
+```text
+head = head.next
+size--
+```
+
+Jika setelah penghapusan list menjadi kosong:
+
+```text
+tail = null
+```
+
+#### Nilai `X` berada setelah `head`
+
+Lakukan traversal sampai menemukan node yang `next`-nya memiliki nilai `X`.
+
+Misalnya:
+
+```text
+head
+ |
+ v
+[5] -> [10] -> [20] -> [30] -> null
+```
+
+Untuk:
+
+```text
+PULANG 20
+```
+
+node `10` ditemukan sebagai node sebelum `20`.
+
+Kemudian hubungan:
+
+```text
+10 -> 20 -> 30
+```
+
+diubah menjadi:
+
+```text
+10 ------> 30
+```
+
+sehingga:
+
+```text
+[5] -> [10] -> [30] -> null
+```
+
+Jika node yang dihapus merupakan `tail`, maka `tail` harus dipindahkan ke node sebelumnya.
+
+#### Nilai `X` tidak ditemukan
+
+Jika traversal selesai dan tidak ditemukan node dengan nilai `X`:
+
+```text
+jumlahPerintahGagal++
+```
+
+---
+
+## Contoh Data Duplikat
+
+Misalkan barisan:
+
+```text
+head
+ |
+ v
+[5] -> [7] -> [10] -> [7] -> [20] -> null
+```
+
+Kemudian diberikan:
+
+```text
+PULANG 7
+```
+
+Traversal dimulai dari `head`.
+
+Node bernilai `7` yang pertama kali ditemukan adalah:
+
+```text
+[5] -> [7] -> ...
+        ^
+        |
+     dihapus
+```
+
+Sehingga hasilnya:
+
+```text
+[5] -> [10] -> [7] -> [20] -> null
+```
+
+Node `7` yang kedua tetap berada di dalam barisan.
+
+---
+
+## Kompleksitas
+
+### `DEPAN`
+
+Karena node langsung ditambahkan menggunakan `head`:
+
+```text
+O(1)
+```
+
+### `BELAKANG`
+
+Karena node langsung ditambahkan menggunakan `tail`:
+
+```text
+O(1)
+```
+
+### `PULANG`
+
+Pada kasus terburuk, traversal dilakukan dari `head` hingga `tail`:
+
+```text
+O(N)
+```
+
+Untuk maksimal `N` perintah, kompleksitas keseluruhan pada kasus terburuk dapat mencapai:
+
+```text
+O(N²)
+```
+
+Sedangkan penggunaan memori:
+
+```text
+O(N)
+```
+
+karena setiap bebek yang berada di dalam barisan direpresentasikan oleh sebuah node.
+
+---
+
+## Implementasi
+
+Solusi tersedia pada file:
+
+```text
+Solution.java
+```
+
+Struktur utama yang digunakan:
+
+```text
+Solution
+│
+├── Node
+│   ├── data
+│   └── next
+│
+└── SLL
+    ├── head
+    ├── tail
+    ├── size
+    ├── jumlahPerintahGagal
+    ├── depan()
+    ├── belakang()
+    ├── pulang()
+    └── cetak()
+```
+
+---
+
+## Catatan
+
+Penyelesaian **wajib menggunakan implementasi Single Linked List sendiri**.
+
+Tidak diperbolehkan menggunakan struktur data bawaan Java seperti:
 
 - `ArrayList`
 - `LinkedList`
 - `HashMap`
 - `Set`
-- atau struktur data bawaan lain untuk menggantikan implementasi Single Linked List.
+
+atau struktur data bawaan lainnya untuk menggantikan Single Linked List.
 
 Nama file solusi harus:
 
 ```text
 Solution.java
 ```
-
----
-
-## Konsep yang Diuji
-
-Soal ini menguji pemahaman mengenai:
-
-- pembuatan `Node`;
-- penggunaan pointer `next`;
-- penggunaan `head` dan `tail`;
-- penambahan node di depan;
-- penambahan node di belakang;
-- traversal Single Linked List;
-- pencarian node;
-- penghapusan node;
-- penghapusan `head`;
-- penghapusan `tail`;
-- penanganan list kosong;
-- pemeliharaan ukuran linked list.
-
----
-
-## Struktur yang Diharapkan
-
-Secara umum Single Linked List dapat digambarkan sebagai:
-
-```text
-head
- |
- v
-+------+------+
-| data | next |----+
-+------+------+    |
-                  v
-             +------+------+
-             | data | next |----+
-             +------+------+    |
-                                v
-                           +------+------+
-                           | data | null |
-                           +------+------+
-                                   ^
-                                   |
-                                  tail
-```
-
-Operasi `DEPAN X` menambahkan node baru pada posisi `head`.
-
-```text
-Sebelum:
-
-head
- |
- v
-[A] -> [B] -> [C] -> null
-
-
-DEPAN X
-
-
-Sesudah:
-
-head
- |
- v
-[X] -> [A] -> [B] -> [C] -> null
-```
-
-Operasi `BELAKANG X` menambahkan node setelah `tail`.
-
-```text
-Sebelum:
-
-head             tail
- |                 |
- v                 v
-[A] -> [B] -> [C] -> null
-
-
-BELAKANG X
-
-
-Sesudah:
-
-head                    tail
- |                        |
- v                        v
-[A] -> [B] -> [C] -> [X] -> null
-```
-
-Sedangkan `PULANG X` melakukan traversal dari `head` dan menghapus node pertama dengan nilai `X`.
-
----
