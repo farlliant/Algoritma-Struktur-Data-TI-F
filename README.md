@@ -1,4 +1,6 @@
-﻿# 🚀 Algoritma & Struktur Data — TI-F
+<div align="center">
+ 
+ # 🚀 Algoritma & Struktur Data — TI-F
 
 <p align="center">
   <img src="https://img.shields.io/badge/LANGUAGE-JAVA-F89820?style=for-the-badge&labelColor=555555" alt="Java">
