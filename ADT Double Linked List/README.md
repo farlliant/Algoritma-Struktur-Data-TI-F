@@ -144,8 +144,8 @@ Digunakan untuk menambahkan node pada bagian akhir list.
 Sebelum:
 
 ```text
-head                 tail
- ↓                     ↓
+head            tail
+ ↓               ↓
 [A] <-> [B] <-> [C]
 ```
 
@@ -158,8 +158,8 @@ addLast(X)
 menjadi:
 
 ```text
-head                         tail
- ↓                             ↓
+head                    tail
+ ↓                       ↓
 [A] <-> [B] <-> [C] <-> [X]
 ```
 
@@ -354,8 +354,8 @@ A.next = null
 Sebelum:
 
 ```text
-head             tail
- ↓                 ↓
+head            tail
+ ↓               ↓
 [A] <-> [B] <-> [C]
 ```
 
@@ -368,8 +368,8 @@ addFirst(X)
 menjadi:
 
 ```text
-head                     tail
- ↓                         ↓
+head                    tail
+ ↓                       ↓
 [X] <-> [A] <-> [B] <-> [C]
 ```
 
