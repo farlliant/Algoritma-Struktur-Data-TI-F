@@ -10,8 +10,6 @@
 
 ---
 
-<div align="center">
-
 ## 👋 Selamat Datang!
 
 Selamat datang di repository **Algoritma & Struktur Data TI-F** 🚀
