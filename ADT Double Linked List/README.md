@@ -432,11 +432,13 @@ Pada latihan, implementasi Double Linked List dikembangkan agar memiliki operasi
 
 # Tugas Praktikum
 
-Soal tugas tersedia pada:
+Soal dan penyelesaian tugas tersedia pada:
 
 👉 [Tugas Praktikum](./Tugas-Praktikum)
 
-Penyelesaian tugas belum disertakan.
+Tugas membahas penggunaan object `Mahasiswa` pada Double Linked List,
+penyisipan data terurut berdasarkan IPK, serta traversal ascending
+dan descending.
 
 ---
 
