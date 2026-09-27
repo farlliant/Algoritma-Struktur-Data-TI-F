@@ -106,13 +106,13 @@ public class CircularSingleLinkedList {
         CircularSingleLinkedList csll =
                 new CircularSingleLinkedList();
 
-        csll.SisipDataDiAwal(new Integer(50));
-        csll.SisipDataDiAwal(new Integer(60));
-        csll.SisipDataDiAwal(new Integer(70));
-        csll.SisipDataDiAwal(new Integer(8));
-        csll.SisipDataDiAwal(new Integer(9));
-        csll.SisipDataDiAwal(new Integer(90));
-        csll.SisipDataDiAwal(new Integer(19));
+        csll.SisipDataDiAwal(50);
+        csll.SisipDataDiAwal(60);
+        csll.SisipDataDiAwal(70);
+        csll.SisipDataDiAwal(8);
+        csll.SisipDataDiAwal(9);
+        csll.SisipDataDiAwal(90);
+        csll.SisipDataDiAwal(19);
 
         csll.cetak("csll Asal");
 
