@@ -30,7 +30,7 @@ Setiap materi disusun berdasarkan topik praktikum dan ditempatkan pada folder ma
 | **02** | [ADT Array](./ADT%20Array) | ✅ |
 | **03** | [ADT Single Linked List](./ADT%20Single%20Linked%20List) | ✅ |
 | **04** | [ADT Double Linked List](./ADT%20Double%20Linked%20List) | ✅ |
-| **05** | ADT Circular Linked List | ⏳ |
+| **05** | [ADT Circular Linked List](./ADT%20Circular%20Linked%20List) | ✅ |
 | **06** | ADT Stack | ⏳ |
 | **07** | ADT Queue | ⏳ |
 | **08** | ADT Binary Tree | ⏳ |
