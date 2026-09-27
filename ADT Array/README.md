@@ -382,6 +382,7 @@ Tugas terdiri dari:
 ```text
 Tugas 1 — Pengolahan Array
 Tugas 2 — ADT Matrik
+```
 
 ---
 
