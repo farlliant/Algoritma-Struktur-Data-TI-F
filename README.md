@@ -41,6 +41,117 @@ Folder **Latihan**, **Tugas Praktikum**, dan **Live Coding** dapat memuat implem
 
 ---
 
+## ▶️ Menjalankan Repository
+
+Repository ini terdiri dari beberapa program Java independen.
+
+Beberapa materi menggunakan nama class yang sama seperti:
+
+```text
+Node
+Main
+Solution
+SLL
+DLL
+```
+
+Hal tersebut normal karena setiap **Percobaan**, **Latihan**,
+**Tugas Praktikum**, dan **Live Coding** merupakan program yang
+berdiri sendiri.
+
+Untuk menghindari konflik antar-class ketika repository dibuka
+menggunakan VS Code, repository menyediakan multi-root workspace:
+
+```text
+Algoritma-Struktur-Data-TI-F.code-workspace
+```
+
+Buka repository menggunakan:
+
+```powershell
+code ".\Algoritma-Struktur-Data-TI-F.code-workspace"
+```
+
+### Requirement
+
+```text
+JDK 17+
+```
+
+Repository tidak memerlukan Maven, Gradle, maupun dependency eksternal.
+
+Periksa Java:
+
+```powershell
+java -version
+javac -version
+```
+
+### Verifikasi Seluruh Source
+
+Untuk memastikan seluruh source Java dapat dikompilasi:
+
+```powershell
+.\verify.ps1
+```
+
+Jika seluruh program berhasil:
+
+```text
+ALL MODULES COMPILED SUCCESSFULLY
+```
+
+Setiap folder dikompilasi secara independen sehingga nama class
+yang sama pada materi lain tidak saling bertabrakan.
+
+### Menjalankan Program
+
+Repository menyediakan script:
+
+```text
+run.ps1
+```
+
+Contoh:
+
+```powershell
+.\run.ps1 array-latihan
+```
+
+```powershell
+.\run.ps1 array-tugas1
+```
+
+```powershell
+.\run.ps1 array-tugas2
+```
+
+```powershell
+.\run.ps1 sll-latihan
+```
+
+```powershell
+.\run.ps1 dll-latihan
+```
+
+```powershell
+.\run.ps1 circular-single
+```
+
+Live Coding juga dapat dijalankan dengan:
+
+```powershell
+.\run.ps1 lc-array
+```
+
+```powershell
+.\run.ps1 lc-sll
+```
+
+Program Live Coding yang menggunakan `Scanner` membutuhkan input
+melalui terminal.
+
+---
 ## 📚 Daftar Materi
 
 | BAB | Topik Pembahasan | Status |

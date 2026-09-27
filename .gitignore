@@ -1,10 +1,15 @@
 # Java compiled files
 *.class
 
+# Local build output
+.build/
+.run/
+.vscode-java/
+
 # VS Code
 .vscode/
 
-# IntelliJ
+# IntelliJ IDEA
 .idea/
 *.iml
 

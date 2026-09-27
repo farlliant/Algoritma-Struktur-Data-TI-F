@@ -67,13 +67,13 @@ public class CircularDoubleLinkedList {
         CircularDoubleLinkedList cdll =
                 new CircularDoubleLinkedList();
 
-        cdll.SisipDataDiAwal(new Integer(50));
-        cdll.SisipDataDiAwal(new Integer(60));
-        cdll.SisipDataDiAwal(new Integer(70));
-        cdll.SisipDataDiAwal(new Integer(8));
-        cdll.SisipDataDiAwal(new Integer(9));
-        cdll.SisipDataDiAwal(new Integer(90));
-        cdll.SisipDataDiAwal(new Integer(19));
+        cdll.SisipDataDiAwal(50);
+        cdll.SisipDataDiAwal(60);
+        cdll.SisipDataDiAwal(70);
+        cdll.SisipDataDiAwal(8);
+        cdll.SisipDataDiAwal(9);
+        cdll.SisipDataDiAwal(90);
+        cdll.SisipDataDiAwal(19);
 
         cdll.cetak("cdll Asal");
     }

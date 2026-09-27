@@ -1,4 +1,4 @@
-﻿# 02 — ADT Array
+# 02 — ADT Array
 
 Materi ini membahas **Array** sebagai salah satu struktur data dasar yang digunakan untuk menyimpan sekumpulan data dalam satu variabel.
 
@@ -178,7 +178,7 @@ data[baris][kolom]
 
 File:
 
-👉 [Percobaan1.java](./Percobaan1.java)
+👉 [Percobaan1.java](./Percobaan/Percobaan1.java)
 
 Percobaan ini menunjukkan:
 
@@ -202,7 +202,7 @@ anArray[1] = 20;
 
 File:
 
-👉 [Percobaan2.java](./Percobaan2.java)
+👉 [Percobaan2.java](./Percobaan/Percobaan2.java)
 
 Percobaan ini menggunakan beberapa operasi dari `Arrays`, seperti:
 
@@ -243,7 +243,7 @@ Array Baru
 
 File:
 
-👉 [Percobaan3.java](./Percobaan3.java)
+👉 [Percobaan3.java](./Percobaan/Percobaan3.java)
 
 Percobaan ini menggunakan:
 
@@ -271,7 +271,7 @@ Contoh:
 
 File:
 
-👉 [Percobaan4.java](./Percobaan4.java)
+👉 [Percobaan4.java](./Percobaan/Percobaan4.java)
 
 Percobaan ini menggunakan array dua dimensi:
 
@@ -302,7 +302,7 @@ for (...) {
 
 File:
 
-👉 [Percobaan5.java](./Percobaan5.java)
+👉 [Percobaan5.java](./Percobaan/Percobaan5.java)
 
 Pada array dua dimensi:
 
@@ -341,7 +341,7 @@ Total kapasitas:
 
 File:
 
-👉 [Matrik.java](./Matrik.java)
+👉 [Matrik.java](./Referensi-Modul/Matrik-Skeleton.java.txt)
 
 File ini digunakan sebagai implementasi awal ADT Matriks menggunakan array dua dimensi.
 
