@@ -5,92 +5,84 @@
                         "path":  "Algoritma"
                     },
                     {
-                        "name":  "02A - Array Percobaan",
-                        "path":  "ADT Array/Percobaan"
+                        "name":  "ADT Array - Latihan - ",
+                        "path":  "ADT Array/Latihan/"
                     },
                     {
-                        "name":  "02B - Array Latihan",
-                        "path":  "ADT Array/Latihan"
+                        "name":  "ADT Array - Percobaan - ",
+                        "path":  "ADT Array/Percobaan/"
                     },
                     {
-                        "name":  "02C - Array Tugas 1",
-                        "path":  "ADT Array/Tugas-Praktikum/Tugas-1"
+                        "name":  "ADT Array - Tugas-Praktikum - Tugas-1 - ",
+                        "path":  "ADT Array/Tugas-Praktikum/Tugas-1/"
                     },
                     {
-                        "name":  "02D - Array Tugas 2",
-                        "path":  "ADT Array/Tugas-Praktikum/Tugas-2"
+                        "name":  "ADT Array - Tugas-Praktikum - Tugas-2 - ",
+                        "path":  "ADT Array/Tugas-Praktikum/Tugas-2/"
                     },
                     {
-                        "name":  "03A - SLL Percobaan 1",
-                        "path":  "ADT Single Linked List/Percobaan-1"
+                        "name":  "ADT Circular Linked List - Percobaan-1-Circular-Single-Linked-List - ",
+                        "path":  "ADT Circular Linked List/Percobaan-1-Circular-Single-Linked-List/"
                     },
                     {
-                        "name":  "03B - SLL Percobaan 2 Tahap 1",
-                        "path":  "ADT Single Linked List/Percobaan-2-Tahap-1"
+                        "name":  "ADT Circular Linked List - Percobaan-2-Circular-Double-Linked-List - ",
+                        "path":  "ADT Circular Linked List/Percobaan-2-Circular-Double-Linked-List/"
                     },
                     {
-                        "name":  "03C - SLL Percobaan 2 Tahap 2",
-                        "path":  "ADT Single Linked List/Percobaan-2-Tahap-2"
+                        "name":  "ADT Double Linked List - Latihan - ",
+                        "path":  "ADT Double Linked List/Latihan/"
                     },
                     {
-                        "name":  "03D - SLL Latihan",
-                        "path":  "ADT Single Linked List/Latihan"
+                        "name":  "ADT Double Linked List - Percobaan-1 - ",
+                        "path":  "ADT Double Linked List/Percobaan-1/"
                     },
                     {
-                        "name":  "03E - SLL Tugas Praktikum",
-                        "path":  "ADT Single Linked List/Tugas-Praktikum"
+                        "name":  "ADT Double Linked List - Percobaan-2-Tahap-1 - ",
+                        "path":  "ADT Double Linked List/Percobaan-2-Tahap-1/"
                     },
                     {
-                        "name":  "04A - DLL Percobaan 1",
-                        "path":  "ADT Double Linked List/Percobaan-1"
+                        "name":  "ADT Double Linked List - Percobaan-2-Tahap-2 - ",
+                        "path":  "ADT Double Linked List/Percobaan-2-Tahap-2/"
                     },
                     {
-                        "name":  "04B - DLL Percobaan 2 Tahap 1",
-                        "path":  "ADT Double Linked List/Percobaan-2-Tahap-1"
+                        "name":  "ADT Double Linked List - Tugas-Praktikum - ",
+                        "path":  "ADT Double Linked List/Tugas-Praktikum/"
                     },
                     {
-                        "name":  "04C - DLL Percobaan 2 Tahap 2",
-                        "path":  "ADT Double Linked List/Percobaan-2-Tahap-2"
+                        "name":  "ADT Single Linked List - Latihan - ",
+                        "path":  "ADT Single Linked List/Latihan/"
                     },
                     {
-                        "name":  "04D - DLL Latihan",
-                        "path":  "ADT Double Linked List/Latihan"
+                        "name":  "ADT Single Linked List - Percobaan-1 - ",
+                        "path":  "ADT Single Linked List/Percobaan-1/"
                     },
                     {
-                        "name":  "04E - DLL Tugas Praktikum",
-                        "path":  "ADT Double Linked List/Tugas-Praktikum"
+                        "name":  "ADT Single Linked List - Percobaan-2-Tahap-1 - ",
+                        "path":  "ADT Single Linked List/Percobaan-2-Tahap-1/"
                     },
                     {
-                        "name":  "05A - Circular Single Percobaan",
-                        "path":  "ADT Circular Linked List/Percobaan-1-Circular-Single-Linked-List"
+                        "name":  "ADT Single Linked List - Percobaan-2-Tahap-2 - ",
+                        "path":  "ADT Single Linked List/Percobaan-2-Tahap-2/"
                     },
                     {
-                        "name":  "05B - Circular Double Percobaan",
-                        "path":  "ADT Circular Linked List/Percobaan-2-Circular-Double-Linked-List"
+                        "name":  "ADT Single Linked List - Tugas-Praktikum - ",
+                        "path":  "ADT Single Linked List/Tugas-Praktikum/"
                     },
                     {
-                        "name":  "05C - Circular Latihan",
-                        "path":  "ADT Circular Linked List/Latihan"
+                        "name":  "Live Coding - ADT Array - Tantangan Kartu Andi dan Budi - ",
+                        "path":  "Live Coding/ADT Array - Tantangan Kartu Andi dan Budi/"
                     },
                     {
-                        "name":  "05D - Circular Tugas Praktikum",
-                        "path":  "ADT Circular Linked List/Tugas-Praktikum"
+                        "name":  "Live Coding - ADT Double Linked List - Gudang Paket Dua Pintu - ",
+                        "path":  "Live Coding/ADT Double Linked List - Gudang Paket Dua Pintu/"
                     },
                     {
-                        "name":  "LC - Array Kartu",
-                        "path":  "Live Coding/ADT Array - Tantangan Kartu Andi dan Budi"
+                        "name":  "Live Coding - ADT Double Linked List - Jalur Kontainer Pelabuhan Budi - ",
+                        "path":  "Live Coding/ADT Double Linked List - Jalur Kontainer Pelabuhan Budi/"
                     },
                     {
-                        "name":  "LC - SLL Bebek",
-                        "path":  "Live Coding/ADT Single Linked List - Barisan Bebek Pak Dengklek"
-                    },
-                    {
-                        "name":  "LC - DLL Kontainer",
-                        "path":  "Live Coding/ADT Double Linked List - Jalur Kontainer Pelabuhan Budi"
-                    },
-                    {
-                        "name":  "LC - DLL Gudang",
-                        "path":  "Live Coding/ADT Double Linked List - Gudang Paket Dua Pintu"
+                        "name":  "Live Coding - ADT Single Linked List - Barisan Bebek Pak Dengklek - ",
+                        "path":  "Live Coding/ADT Single Linked List - Barisan Bebek Pak Dengklek/"
                     }
                 ],
     "settings":  {

@@ -1,5 +1,11 @@
+[CmdletBinding(DefaultParameterSetName = "Alias")]
 param(
-    [Parameter(Mandatory = $true)]
+
+    [Parameter(
+        Mandatory = $true,
+        Position = 0,
+        ParameterSetName = "Alias"
+    )]
     [ValidateSet(
         "array-latihan",
         "array-tugas1",
@@ -15,7 +21,19 @@ param(
         "lc-dll-kontainer",
         "lc-dll-gudang"
     )]
-    [string]$Program
+    [string]$Program,
+
+    [Parameter(
+        Mandatory = $true,
+        ParameterSetName = "Path"
+    )]
+    [string]$Path,
+
+    [Parameter(
+        Mandatory = $false,
+        ParameterSetName = "Path"
+    )]
+    [string]$Main
 )
 
 $ErrorActionPreference = "Stop"
@@ -23,6 +41,7 @@ $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 $Programs = @{
+
     "array-latihan" = @{
         Path = "ADT Array\Latihan"
         Main = "LatihanArray"
@@ -89,10 +108,68 @@ $Programs = @{
     }
 }
 
-$Config = $Programs[$Program]
+if ($PSCmdlet.ParameterSetName -eq "Alias") {
 
-$SourceDir = Join-Path $Root $Config.Path
-$OutputDir = Join-Path $Root ".run\$Program"
+    $Config = $Programs[$Program]
+
+    $SourceDir = Join-Path $Root $Config.Path
+    $MainClass = $Config.Main
+    $RunName = $Program
+
+}
+else {
+
+    $SourceDir = Join-Path $Root $Path
+
+    if (-not (Test-Path $SourceDir)) {
+        throw "Folder tidak ditemukan: $Path"
+    }
+
+    $RunName = (
+        $Path -replace '[^A-Za-z0-9_-]', '_'
+    )
+
+    if ($Main) {
+
+        $MainClass = $Main
+
+    }
+    else {
+
+        $Candidates = @(
+            Get-ChildItem `
+                -Path $SourceDir `
+                -Filter "*.java" `
+                -File |
+            Where-Object {
+                [System.IO.File]::ReadAllText(
+                    $_.FullName
+                ) -match `
+                'public\s+static\s+void\s+main\s*\('
+            }
+        )
+
+        if ($Candidates.Count -eq 0) {
+            throw "Tidak ditemukan method main(). Gunakan -Main <NamaClass>."
+        }
+
+        if ($Candidates.Count -gt 1) {
+
+            Write-Host "Ditemukan beberapa main class:" `
+                -ForegroundColor Yellow
+
+            foreach ($Candidate in $Candidates) {
+                Write-Host " - $($Candidate.BaseName)"
+            }
+
+            throw "Gunakan -Main <NamaClass>."
+        }
+
+        $MainClass = $Candidates[0].BaseName
+    }
+}
+
+$OutputDir = Join-Path $Root ".run\$RunName"
 
 if (Test-Path $OutputDir) {
     Remove-Item $OutputDir -Recurse -Force
@@ -111,7 +188,7 @@ $Files = @(
 )
 
 if ($Files.Count -eq 0) {
-    throw "Tidak ditemukan source Java pada $($Config.Path)"
+    throw "Tidak ada source Java di $SourceDir"
 }
 
 $Arguments = @(
@@ -128,11 +205,17 @@ foreach ($File in $Files) {
 & javac $Arguments
 
 if ($LASTEXITCODE -ne 0) {
-    throw "Compile gagal untuk $Program"
+    throw "Compile gagal."
 }
+
+Write-Host ""
+Write-Host "Running: $MainClass" `
+    -ForegroundColor Cyan
+
+Write-Host ""
 
 & java `
     -cp $OutputDir `
-    $Config.Main
+    $MainClass
 
 exit $LASTEXITCODE
