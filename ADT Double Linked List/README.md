@@ -415,7 +415,11 @@ tail
 
 # Latihan
 
-Pada latihan, implementasi Double Linked List dikembangkan agar memiliki operasi:
+Soal dan penyelesaian Latihan tersedia pada:
+
+👉 [Latihan](./Latihan)
+
+Latihan melengkapi operasi:
 
 ```text
 1. Inisialisasi
