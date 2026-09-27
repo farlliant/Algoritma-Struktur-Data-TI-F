@@ -358,6 +358,33 @@ Beberapa operasi yang dibahas antara lain:
 
 ---
 
+---
+
+# Latihan
+
+Soal dan penyelesaian Latihan tersedia pada:
+
+👉 [Latihan](./Latihan)
+
+Latihan menggunakan data array yang diberikan pada modul dan
+mengimplementasikannya dalam Java.
+
+---
+
+# Tugas Praktikum
+
+Soal dan penyelesaian Tugas Praktikum tersedia pada:
+
+👉 [Tugas Praktikum](./Tugas-Praktikum)
+
+Tugas terdiri dari:
+
+```text
+Tugas 1 — Pengolahan Array
+Tugas 2 — ADT Matrik
+
+---
+
 # Ringkasan
 
 Konsep utama pada materi ADT Array:
