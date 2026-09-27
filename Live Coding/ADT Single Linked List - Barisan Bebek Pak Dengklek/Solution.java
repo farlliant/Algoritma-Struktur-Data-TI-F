@@ -62,16 +62,26 @@ public class Solution{
         }
 
         void cetak(){
-            Node temp = head;
             System.out.println(size + " " + gagal);
+
             if(isEmpty()){
                 System.out.println("KOSONG");
-            } else{
-                while(temp != null){
-                    System.out.print(temp.data + " ");
-                    temp = temp.next;
-                }
+                return;
             }
+
+            Node temp = head;
+
+            while(temp != null){
+                System.out.print(temp.data);
+
+                if(temp.next != null){
+                    System.out.print(" ");
+                }
+
+                temp = temp.next;
+            }
+
+            System.out.println();
         }
     }
     
