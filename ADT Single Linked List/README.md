@@ -452,6 +452,28 @@ Node node = new Node();
 
 ---
 
+# Latihan
+
+Soal dan penyelesaian Latihan tersedia pada:
+
+👉 [Latihan](./Latihan)
+
+Latihan melengkapi operasi Single Linked List berupa penambahan,
+penghapusan, penyisipan, pencarian, dan pengaksesan.
+
+---
+
+# Tugas Praktikum
+
+Soal dan penyelesaian Tugas Praktikum tersedia pada:
+
+👉 [Tugas Praktikum](./Tugas-Praktikum)
+
+Tugas membahas penggunaan object `Mahasiswa` dan penyisipan
+terurut berdasarkan IPK.
+
+---
+
 # Kompleksitas Operasi Dasar
 
 Karena implementasi menyimpan referensi `head` dan `tail`:
