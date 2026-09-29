@@ -5,7 +5,7 @@ $Source = Join-Path $Root "Solution.java"
 
 $Build = Join-Path `
     $env:TEMP `
-    "asd-cdll-public-test"
+    "asd-dll-kontainer-public-test"
 
 if (Test-Path $Build) {
     Remove-Item `
@@ -32,16 +32,16 @@ try {
 
     $InputData = @"
 10
-BELAKANG 10
-BELAKANG 20
-DEPAN 5
-BELAKANG 10
-HAPUS_BELAKANG 10
-DEPAN 7
-HAPUS_DEPAN 10
-HAPUS_BELAKANG 99
-BELAKANG 30
-HAPUS_DEPAN 7
+TIMUR 10
+TIMUR 20
+BARAT 5
+TIMUR 10
+AMBIL_TIMUR 10
+BARAT 7
+AMBIL_BARAT 10
+AMBIL_TIMUR 99
+TIMUR 30
+AMBIL_BARAT 7
 "@
 
     $Expected = @"
