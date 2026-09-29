@@ -26,3 +26,7 @@ jobs:
       - name: Verify Java modules
         shell: powershell
         run: .\verify.ps1
+
+      - name: Run Live Coding public tests
+        shell: powershell
+        run: .\test-live-coding.ps1
