@@ -246,6 +246,13 @@ Penyelesaian tugas belum disertakan.
 
 ---
 
+# Live Coding
+
+Terdapat satu latihan live coding:
+
+1. [Playlist Musik Berputar Raka](../Live%20Coding/ADT%20Circular%20Double%20Linked%20List%20-%20Playlist%20Musik%20Berputar%20Raka)
+
+---
 # Ringkasan
 
 ```text
