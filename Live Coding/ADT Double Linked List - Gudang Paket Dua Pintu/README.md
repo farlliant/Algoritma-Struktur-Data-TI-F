@@ -528,6 +528,7 @@ target.next.prev = target.prev;
 Solusi lengkap tersedia pada:
 
 👉 [`Solution.java`](./Solution.java)
+
 ---
 
 ## Public Test

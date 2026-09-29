@@ -192,6 +192,7 @@ Penyelesaian tidak membutuhkan struktur data tambahan seperti:
 - `Set`
 
 Seluruh proses cukup menggunakan array, sorting, perulangan, dan percabangan.
+
 ---
 
 ## Public Test
