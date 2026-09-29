@@ -5,7 +5,7 @@ $Source = Join-Path $Root "Solution.java"
 
 $Build = Join-Path `
     $env:TEMP `
-    "asd-cdll-public-test"
+    "asd-array-public-test"
 
 if (Test-Path $Build) {
     Remove-Item `
@@ -31,23 +31,13 @@ try {
     }
 
     $InputData = @"
-10
-BELAKANG 10
-BELAKANG 20
-DEPAN 5
-BELAKANG 10
-HAPUS_BELAKANG 10
-DEPAN 7
-HAPUS_DEPAN 10
-HAPUS_BELAKANG 99
-BELAKANG 30
-HAPUS_DEPAN 7
+6
+10 4 7 1 13 16
 "@
 
     $Expected = @"
-3 1
-5 20 30
-30 20 5
+3 5
+1 4
 "@
 
     $InputFile = Join-Path $Build "input.txt"
