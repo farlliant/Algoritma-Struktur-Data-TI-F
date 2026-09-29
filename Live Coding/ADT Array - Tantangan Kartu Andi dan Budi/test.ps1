@@ -40,35 +40,35 @@ try {
 1 4
 "@
 
-    $ProcessInfo =
-        New-Object System.Diagnostics.ProcessStartInfo
+    $InputFile = Join-Path $Build "input.txt"
+    $OutputFile = Join-Path $Build "output.txt"
+    $ErrorFile = Join-Path $Build "error.txt"
 
-    $ProcessInfo.FileName = "java"
-    $ProcessInfo.Arguments = "-cp `"$Build`" Solution"
+    $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 
-    $ProcessInfo.UseShellExecute = $false
-    $ProcessInfo.RedirectStandardInput = $true
-    $ProcessInfo.RedirectStandardOutput = $true
-    $ProcessInfo.RedirectStandardError = $true
-    $ProcessInfo.CreateNoWindow = $true
+    [System.IO.File]::WriteAllText(
+        $InputFile,
+        ($InputData.Trim() + "`n"),
+        $Utf8NoBom
+    )
 
-    $Process =
-        New-Object System.Diagnostics.Process
+    $JavaArguments = "-cp `"$Build`" Solution"
 
-    $Process.StartInfo = $ProcessInfo
-
-    [void]$Process.Start()
-
-    $Process.StandardInput.Write($InputData)
-    $Process.StandardInput.Close()
+    $Process = Start-Process `
+        -FilePath "java" `
+        -ArgumentList $JavaArguments `
+        -RedirectStandardInput $InputFile `
+        -RedirectStandardOutput $OutputFile `
+        -RedirectStandardError $ErrorFile `
+        -NoNewWindow `
+        -Wait `
+        -PassThru
 
     $Actual =
-        $Process.StandardOutput.ReadToEnd()
+        [System.IO.File]::ReadAllText($OutputFile)
 
     $ErrorOutput =
-        $Process.StandardError.ReadToEnd()
-
-    $Process.WaitForExit()
+        [System.IO.File]::ReadAllText($ErrorFile)
 
     if ($Process.ExitCode -ne 0) {
         Write-Host "[FAIL] PUBLIC SAMPLE" -ForegroundColor Red
