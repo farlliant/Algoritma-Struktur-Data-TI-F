@@ -898,9 +898,6 @@ Solusi lengkap tersedia pada:
 
 👉 [`Solution.java`](./Solution.java)
 
-Automated test tersedia pada:
-
-👉 [`test.ps1`](./test.ps1)
 ---
 
 ## Public Test

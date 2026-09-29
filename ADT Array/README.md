@@ -386,6 +386,14 @@ Tugas 2 — ADT Matrik
 
 ---
 
+# Live Coding
+
+Terdapat satu latihan live coding:
+
+1. [Tantangan Kartu Andi dan Budi](../Live%20Coding/ADT%20Array%20-%20Tantangan%20Kartu%20Andi%20dan%20Budi)
+
+---
+
 # Ringkasan
 
 Konsep utama pada materi ADT Array:
