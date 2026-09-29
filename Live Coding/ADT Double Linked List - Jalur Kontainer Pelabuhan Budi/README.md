@@ -552,3 +552,14 @@ target.next.prev = target.prev;
 Solusi lengkap tersedia pada:
 
 👉 [`Solution.java`](./Solution.java)
+---
+
+## Public Test
+
+Repository menyediakan automated public smoke test pada:
+
+👉 [`test.ps1`](./test.ps1)
+
+Test tersebut hanya menggunakan contoh publik yang sudah tersedia pada README untuk memastikan `Solution.java` dapat dikompilasi dan menghasilkan output contoh yang benar.
+
+Public test ini **bukan hidden testcase ELING** dan tidak digunakan sebagai pengganti testcase penilaian.

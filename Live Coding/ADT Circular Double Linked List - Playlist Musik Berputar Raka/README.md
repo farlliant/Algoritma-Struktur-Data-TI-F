@@ -901,3 +901,14 @@ Solusi lengkap tersedia pada:
 Automated test tersedia pada:
 
 👉 [`test.ps1`](./test.ps1)
+---
+
+## Public Test
+
+Repository menyediakan automated public smoke test pada:
+
+👉 [`test.ps1`](./test.ps1)
+
+Test tersebut hanya menggunakan contoh publik yang sudah tersedia pada README untuk memastikan `Solution.java` dapat dikompilasi dan menghasilkan output contoh yang benar.
+
+Public test ini **bukan hidden testcase ELING** dan tidak digunakan sebagai pengganti testcase penilaian.

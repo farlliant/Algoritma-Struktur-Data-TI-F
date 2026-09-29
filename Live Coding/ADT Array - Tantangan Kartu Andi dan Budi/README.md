@@ -1,4 +1,4 @@
-﻿# Live Coding ADT Array — Tantangan Kartu Andi dan Budi
+# Live Coding ADT Array — Tantangan Kartu Andi dan Budi
 
 Soal ini digunakan untuk latihan/live coding materi **ADT Array** pada Praktikum Algoritma dan Struktur Data.
 
@@ -192,3 +192,14 @@ Penyelesaian tidak membutuhkan struktur data tambahan seperti:
 - `Set`
 
 Seluruh proses cukup menggunakan array, sorting, perulangan, dan percabangan.
+---
+
+## Public Test
+
+Repository menyediakan automated public smoke test pada:
+
+👉 [`test.ps1`](./test.ps1)
+
+Test tersebut hanya menggunakan contoh publik yang sudah tersedia pada README untuk memastikan `Solution.java` dapat dikompilasi dan menghasilkan output contoh yang benar.
+
+Public test ini **bukan hidden testcase ELING** dan tidak digunakan sebagai pengganti testcase penilaian.
