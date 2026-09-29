@@ -148,8 +148,38 @@ Live Coding juga dapat dijalankan dengan:
 .\run.ps1 lc-sll
 ```
 
+```powershell
+.\run.ps1 lc-dll-kontainer
+```
+
+```powershell
+.\run.ps1 lc-dll-gudang
+```
+
+```powershell
+.\run.ps1 lc-cdll
+```
+
 Program Live Coding yang menggunakan `Scanner` membutuhkan input
 melalui terminal.
+
+### Public Test Live Coding
+
+Setiap folder Live Coding menyediakan `test.ps1` sebagai automated public smoke test.
+
+Public test hanya menggunakan contoh yang sudah tersedia pada README dan bukan merupakan hidden testcase ELING.
+
+Untuk menjalankan seluruh public test sekaligus:
+
+```powershell
+.\test-live-coding.ps1
+```
+
+Jika seluruh test berhasil:
+
+```text
+ALL LIVE CODING PUBLIC TESTS PASSED
+```
 
 ---
 ## 📚 Daftar Materi

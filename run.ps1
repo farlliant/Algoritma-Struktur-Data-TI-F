@@ -19,7 +19,8 @@ param(
         "lc-array",
         "lc-sll",
         "lc-dll-kontainer",
-        "lc-dll-gudang"
+        "lc-dll-gudang",
+        "lc-cdll"
     )]
     [string]$Program,
 
@@ -104,6 +105,11 @@ $Programs = @{
 
     "lc-dll-gudang" = @{
         Path = "Live Coding\ADT Double Linked List - Gudang Paket Dua Pintu"
+        Main = "Solution"
+    }
+
+    "lc-cdll" = @{
+        Path = "Live Coding\ADT Circular Double Linked List - Playlist Musik Berputar Raka"
         Main = "Solution"
     }
 }
