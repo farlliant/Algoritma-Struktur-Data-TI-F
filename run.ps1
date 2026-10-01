@@ -18,6 +18,7 @@ param(
         "circular-double",
         "lc-array",
         "lc-sll",
+        "lc-sll-susulan",
         "lc-dll-kontainer",
         "lc-dll-gudang",
         "lc-cdll"
@@ -95,6 +96,11 @@ $Programs = @{
 
     "lc-sll" = @{
         Path = "Live Coding\ADT Single Linked List - Barisan Bebek Pak Dengklek"
+        Main = "Solution"
+    }
+
+    "lc-sll-susulan" = @{
+        Path = "Live Coding\ADT Single Linked List - Antrean Shuttle Kampus"
         Main = "Solution"
     }
 
