@@ -476,9 +476,10 @@ terurut berdasarkan IPK.
 
 # Live Coding
 
-Terdapat satu latihan live coding:
+Terdapat dua latihan live coding:
 
 1. [Barisan Bebek Pak Dengklek](../Live%20Coding/ADT%20Single%20Linked%20List%20-%20Barisan%20Bebek%20Pak%20Dengklek)
+2. [Antrean Shuttle Kampus](../Live%20Coding/ADT%20Single%20Linked%20List%20-%20Antrean%20Shuttle%20Kampus)
 
 ---
 
